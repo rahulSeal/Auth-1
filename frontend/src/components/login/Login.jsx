@@ -8,11 +8,11 @@ const Login = ({ onError, onClose, onSuccess }) => {
 
     const { email, password } = e.target.elements;
 
-    if ((!email.value || !password.value)) {
+    if (!email.value || !password.value) {
       return onError();
     } else {
       axios
-        .post("https://auth-1-l3ng.onrender.com/api/auth/login", {
+        .post("https://auth-1-1-ulg8.onrender.com/api/auth/login", {
           email: email.value,
           password: password.value,
         })
@@ -21,7 +21,7 @@ const Login = ({ onError, onClose, onSuccess }) => {
           onSuccess();
         })
         .catch(() => {
-          onError()
+          onError();
         });
     }
   }

@@ -8,11 +8,11 @@ const SignIn = ({ onClose, onSuccess, onError, onEmpty }) => {
 
     const { name, email, password } = e.target.elements;
 
-    if ((!name.value || !email.value || !password.value)) {
+    if (!name.value || !email.value || !password.value) {
       return onEmpty();
     } else {
       axios
-        .post("https://auth-1-l3ng.onrender.com/api/auth/register", {
+        .post("https://auth-1-1-ulg8.onrender.com/api/auth/register", {
           name: name.value,
           email: email.value,
           password: password.value,
