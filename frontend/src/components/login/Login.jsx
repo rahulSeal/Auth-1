@@ -9,7 +9,7 @@ const Login = ({ onError, onClose, onSuccess }) => {
 
     const { email, password } = e.target.elements;
     axios
-      .post("https://auth-1-l3ng.onrender.com", {
+      .post("https://auth-1-l3ng.onrender.com//api/auth/login", {
         email: email.value,
         password: password.value,
       })
