@@ -3,23 +3,27 @@ import axios from "axios";
 import "./login.scss";
 
 const Login = ({ onError, onClose, onSuccess }) => {
-
   function userData(e) {
     e.preventDefault();
 
     const { email, password } = e.target.elements;
-    axios
-      .post("https://auth-1-l3ng.onrender.com//api/auth/login", {
-        email: email.value,
-        password: password.value,
-      })
-      .then((res) => {
-        onClose();
-        onSuccess();
-      })
-      .catch(() => {
-        onError();
-      });
+
+    if ((!email.value, !password.value)) {
+      return onError();
+    } else {
+      axios
+        .post("https://auth-1-l3ng.onrender.com/api/auth/login", {
+          email: email.value,
+          password: password.value,
+        })
+        .then((res) => {
+          onClose();
+          onSuccess();
+        })
+        .catch(() => {
+          onError()
+        });
+    }
   }
 
   return (
