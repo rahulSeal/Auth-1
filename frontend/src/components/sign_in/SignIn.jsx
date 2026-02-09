@@ -12,7 +12,7 @@ const SignIn = ({ onClose, onSuccess, onError, onEmpty }) => {
       return onEmpty();
     } else {
       axios
-        .post("http://localhost:3000/api/auth/register", {
+        .post("https://auth-1-l3ng.onrender.com", {
           name: name.value,
           email: email.value,
           password: password.value,
