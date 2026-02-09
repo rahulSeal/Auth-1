@@ -1,0 +1,37 @@
+.sign-back {
+  background-color: rgba(25, 25, 25, 0.468);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .sign-form-back {
+    background: #5a5a5a;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+
+    input {
+      padding: 1rem 1.2rem;
+      border-radius: 0.75rem;
+      outline: none;
+      border: none;
+    }
+
+    button {
+      padding: 1rem 1.3rem;
+      border-radius: 0.5rem;
+      background-color: cyan;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
