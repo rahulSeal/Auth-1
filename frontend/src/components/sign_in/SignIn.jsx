@@ -8,7 +8,7 @@ const SignIn = ({ onClose, onSuccess, onError, onEmpty }) => {
 
     const { name, email, password } = e.target.elements;
 
-    if ((!name.value && !email.value && !password.value)) {
+    if ((!name.value || !email.value || !password.value)) {
       return onEmpty();
     } else {
       axios

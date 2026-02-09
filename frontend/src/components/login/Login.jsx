@@ -8,7 +8,7 @@ const Login = ({ onError, onClose, onSuccess }) => {
 
     const { email, password } = e.target.elements;
 
-    if ((!email.value && !password.value)) {
+    if ((!email.value || !password.value)) {
       return onError();
     } else {
       axios
